@@ -3,6 +3,11 @@ import { MobileNavigation } from '@/components/Layout/MobileNavigation';
 import { SearchFilters } from '@/components/Dashboard/SearchFilters';
 import { JobCard } from '@/components/Dashboard/JobCard';
 import { AIChatBot } from '@/components/Chat/AIChatBot';
+import { ResumeBuilder } from '@/components/Resume/ResumeBuilder';
+import { SkillGapAnalysis } from '@/components/Skills/SkillGapAnalysis';
+import { CareerPathway } from '@/components/Career/CareerPathway';
+import { PortfolioCreator } from '@/components/Portfolio/PortfolioCreator';
+import { SettingsProfile } from '@/components/Settings/SettingsProfile';
 import { mockJobs, Job } from '@/data/mockJobs';
 import { 
   Zap, 
@@ -178,33 +183,13 @@ const Index = () => {
       case 'chat':
         return <AIChatBot />;
       case 'resume':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-xl font-semibold mb-4">Resume Builder</h2>
-            <p className="text-muted-foreground">Coming soon - AI-powered resume builder with ATS optimization</p>
-          </div>
-        );
+        return <ResumeBuilder />;
       case 'skills':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-xl font-semibold mb-4">Skill Gap Analysis</h2>
-            <p className="text-muted-foreground">Coming soon - Identify missing skills and get learning recommendations</p>
-          </div>
-        );
+        return <SkillGapAnalysis />;
       case 'pathway':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-xl font-semibold mb-4">Career Pathway</h2>
-            <p className="text-muted-foreground">Coming soon - Visualize your career progression path</p>
-          </div>
-        );
+        return <CareerPathway />;
       case 'portfolio':
-        return (
-          <div className="text-center py-12">
-            <h2 className="text-xl font-semibold mb-4">Portfolio Creator</h2>
-            <p className="text-muted-foreground">Coming soon - Generate and export your professional portfolio</p>
-          </div>
-        );
+        return <PortfolioCreator />;
       case 'forum':
         return (
           <div className="text-center py-12">
@@ -212,6 +197,8 @@ const Index = () => {
             <p className="text-muted-foreground">Coming soon - Connect with other job seekers and professionals</p>
           </div>
         );
+      case 'settings':
+        return <SettingsProfile />;
       default:
         return renderDashboard();
     }

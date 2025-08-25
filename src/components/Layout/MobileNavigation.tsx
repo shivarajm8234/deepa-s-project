@@ -7,7 +7,8 @@ import {
   TrendingUp, 
   Briefcase, 
   Users, 
-  MessageCircle 
+  MessageCircle,
+  Settings 
 } from 'lucide-react';
 
 interface NavigationTab {
@@ -24,6 +25,7 @@ const navigationTabs: NavigationTab[] = [
   { id: 'portfolio', label: 'Portfolio', icon: <User className="w-5 h-5" /> },
   { id: 'forum', label: 'Forum', icon: <Users className="w-5 h-5" /> },
   { id: 'chat', label: 'AI Chat', icon: <MessageCircle className="w-5 h-5" /> },
+  { id: 'settings', label: 'Settings', icon: <Settings className="w-5 h-5" /> },
 ];
 
 interface MobileNavigationProps {
