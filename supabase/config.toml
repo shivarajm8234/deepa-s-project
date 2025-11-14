@@ -1,0 +1,29 @@
+# Supabase Configuration File
+# This file contains configuration for the Supabase project
+
+[api]
+# The port number to expose the API on for local development.
+port = 54321
+
+[db]
+# The port number to expose the Postgres database on for local development.
+port = 54322
+
+[studio]
+# The port number to expose the Studio on for local development.
+port = 3000
+
+[inbucket]
+# The port number to expose the email testing interface on for local development.
+port = 54324
+
+[functions]
+# Allow unauthenticated access to the scrape-jobs function
+scrape-jobs = { verify_jwt = false }
+# Directory where Edge Functions are located.
+# Defaults to './functions'
+# directory = "./functions"
+
+# Set to true to enable function logging
+# Defaults to true
+# logging = true
