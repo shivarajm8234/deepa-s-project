@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "scrape-jobs": {
-      "verify_jwt": false
-    }
-  }
-}
